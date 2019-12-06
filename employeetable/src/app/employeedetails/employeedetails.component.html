@@ -1,0 +1,30 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+  <h2>Employeedetails</h2>
+<table style="width:50%">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>experience</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let emp of employeedetail"   appEmpbackcolor  emp= '{{emp.experience}}' > 
+          <th>{{emp.id}}</th>
+          <th>{{emp.name}}</th> 
+          <th>{{emp.experience}}</th>
+      </tr>
+  </tbody>
+</table>
