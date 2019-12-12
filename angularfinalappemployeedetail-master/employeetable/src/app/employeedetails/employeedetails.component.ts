@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employeedetail } from '../employeedetail';
 import { InMemoryDataService } from '../in-memory-data.service';
-import { Observable } from 'rxjs/internal/Observable';
-import { delay } from 'q';
 
 
 
@@ -12,14 +10,11 @@ import { delay } from 'q';
   styleUrls: ['./employeedetails.component.css']
 })
 export class EmployeedetailsComponent implements OnInit { 
-
-  id: any;
   experience: any;
   employeedetails: any;
   emp: any;
   ChechNum: any;
   employeedetail: Employeedetail[];
-  dob: any;
 
   constructor(private InMemoryDataServicenew: InMemoryDataService ) {}  
 
@@ -31,14 +26,8 @@ export class EmployeedetailsComponent implements OnInit {
   
   ngOnInit() {
     this.getEmployeedetails();
-    new Observable(observer => { 
-      setTimeout(() => {
-        
-        for(let i of this.employeedetail)
-        observer.next(i);
-      },100)
-    }).subscribe(value =>{
-     console.log(value)
-    })
+
   }
+
+ 
 }

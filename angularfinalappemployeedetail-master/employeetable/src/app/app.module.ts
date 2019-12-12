@@ -7,18 +7,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
+import { ColorDirective } from './color.directive';
 import { EmpbackcolorDirective } from './empbackcolor.directive';
-import { PipesComponent } from './pipes/pipes.component';
-import { PipesdatebuttonclickComponent } from './pipesdatebuttonclick/pipesdatebuttonclick.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeedetailsComponent,
-    EmpbackcolorDirective,
-    PipesComponent,
-    PipesdatebuttonclickComponent
+    ColorDirective,
+    EmpbackcolorDirective
     
 
   ],
